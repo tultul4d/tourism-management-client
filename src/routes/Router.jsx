@@ -7,6 +7,8 @@ import AddedSpot from "../pages/AddedSpot";
 import List from "../pages/List";
 import Home from "../pages/Home/Home";
 import NotFoundPage from "../pages/NotFoundPage";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
 
 
 
@@ -27,16 +29,20 @@ const router = createBrowserRouter([
         element: <Stops></Stops>
       },
       {
-        path: "/card",
-        element: <Cards></Cards>
-      },
-      {
         path: "/add",
         element: <AddedSpot></AddedSpot>
       },
       {
         path: "/list",
         element: <List></List>
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
       }
     ]
   },

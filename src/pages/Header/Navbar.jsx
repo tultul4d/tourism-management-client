@@ -31,6 +31,21 @@ const Navbar = () => {
                     ? "text-[#FF497C] border-b-4 border-[#FF497C]"
                     : "hover:text-[#FF497C]"
                 }>My List </NavLink></li>
+                <li><NavLink to="/login" className={({ isActive, isPending }) =>
+                  isPending
+                    ? "pending"
+                    : isActive
+                    ? "text-[#FF497C] border-b-4 border-[#FF497C]"
+                    : "hover:text-[#FF497C]"
+                }>Login </NavLink></li>
+
+<li><NavLink to="/register" className={({ isActive, isPending }) =>
+                  isPending
+                    ? "pending"
+                    : isActive
+                    ? "text-[#FF497C] border-b-4 border-[#FF497C]"
+                    : "hover:text-[#FF497C]"
+                }>Register </NavLink></li>
     </>
     return (
         <div className="navbar  bg-orange-100">

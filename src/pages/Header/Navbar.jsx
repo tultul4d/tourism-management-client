@@ -1,7 +1,16 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoTrailSign } from "react-icons/io5";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
+
+    const {user, logOut} = useContext(AuthContext);
+    const handleLogOut = () =>{
+        logOut()
+        .then(() => console.log("logout "))
+        .catch(error => console.error(error))
+    } 
     const navLinks = <>
     <li><NavLink to="/home" className={({ isActive, isPending }) =>
                   isPending
@@ -68,7 +77,15 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+            {
+                user ? <>
+                <span>{user.email}</span>
+                <a onClick={handleLogOut} className="btn">Button</a>
+                </>  : <Link to="/login">
+                <button onClick={handleLogOut} className="btn">Login</button>
+                   </Link>
+            }
+          
         </div>
         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">

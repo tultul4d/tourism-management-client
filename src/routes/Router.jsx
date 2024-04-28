@@ -9,6 +9,7 @@ import Home from "../pages/Home/Home";
 import NotFoundPage from "../pages/NotFoundPage";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -30,11 +31,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/add",
-        element: <AddedSpot></AddedSpot>
+        element: <PrivateRoute><AddedSpot></AddedSpot></PrivateRoute>
       },
       {
         path: "/list",
-        element: <List></List>
+        element: <PrivateRoute><List></List></PrivateRoute>
       },
       {
         path: "/login",

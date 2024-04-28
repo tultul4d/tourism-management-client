@@ -1,11 +1,13 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+
 
 
 const Login = () => {
        
-    const {signInUser} = useContext(AuthContext);
+    const {signInUser, signInWithGoogle, singInWithGithub} = useContext(AuthContext);
+    const navigate = useNavigate();
     
 
 
@@ -20,14 +22,35 @@ const Login = () => {
         signInUser(email, password)
         .then(result => {
                  console.log(result.user)
+                 e.target.reset();
+                 navigate('/home');
         })
         .catch(error =>{
             console.error(error)
+        }) 
+
+    }
+
+    const handleGoogleSignIn = () =>{
+        signInWithGoogle()
+        .then(result =>{
+            console.log(result.user);
+        })
+        .catch(error =>{
+            console.error(error);
         })
 
     }
 
-
+    const handleGithubSignIn = () =>{
+        singInWithGithub()
+        .then(result =>{
+            console.log(result.user);
+        })
+        .catch(error =>{
+            console.error(error);
+        })
+    }
     return (
         
         <div className="hero min-h-screen bg-base-200">
@@ -62,7 +85,10 @@ const Login = () => {
             <p>New to this Site? please <Link to="/register">
             <button className="btn btn-link">Register</button> </Link> </p>
           </div>
+          <p><button onClick={handleGoogleSignIn} className="btn btn-ghost">Google</button></p>
+          <p><button onClick={handleGithubSignIn}>GithubLogin</button></p>
         </div>
+        
       </div>
     );
 };

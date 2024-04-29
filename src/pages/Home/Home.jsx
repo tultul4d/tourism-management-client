@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import SpotCard from "../SpotCard";
 import CardTitels from "../CardTitels";
 import TravelGuide from "./TravelGuide";
+import Animasion from "./Animasion";
 
 
 
@@ -25,6 +26,7 @@ const Home = () => {
             }
             </div>
             <TravelGuide></TravelGuide>
+           <Animasion></Animasion>
             
             
             </div>

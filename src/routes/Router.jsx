@@ -10,6 +10,7 @@ import NotFoundPage from "../pages/NotFoundPage";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import CardsDetails from "../pages/CardsDetails";
 
 
 
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home></Home>,
+        loader: () => fetch('http://localhost:5000/spot')
       },
      
       {
@@ -44,6 +46,11 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path:'/cards/:id',
+        element: <CardsDetails></CardsDetails>,
+        loader: () => fetch(`http://localhost:5000/spot`)
       }
     ]
   },

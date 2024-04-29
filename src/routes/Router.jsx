@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import Root from "../Layouts/Root";
-import Cards from "../pages/Cards";
+
 import Stops from "../pages/Stops";
 import AddedSpot from "../pages/AddedSpot";
 import List from "../pages/List";
@@ -11,6 +11,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import CardsDetails from "../pages/CardsDetails";
+import UpdateSpot from "../pages/UpdateSpot";
 
 
 
@@ -48,9 +49,14 @@ const router = createBrowserRouter([
         element: <Register></Register>
       },
       {
-        path:'/cards/:id',
+        path:'cards',
         element: <CardsDetails></CardsDetails>,
-        loader: () => fetch(`http://localhost:5000/spot`)
+        
+      },
+      {
+        path: "/updateSpot/:id",
+        element: <UpdateSpot></UpdateSpot>,
+        loader: ({params}) => fetch(`http://localhost:5000/spot/${params.id}`)
       }
     ]
   },

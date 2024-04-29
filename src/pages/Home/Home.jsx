@@ -4,11 +4,13 @@ import SpotCard from "../SpotCard";
 import CardTitels from "../CardTitels";
 
 
+
 const Home = () => {
 
     const sports = useLoaderData();
     return (
         <div>
+           
             <Banner></Banner>
             <CardTitels></CardTitels>
             <div className=""><h2>sfgsfgshjf: {sports.length}</h2>

@@ -85,8 +85,10 @@ const Login = () => {
             <p>New to this Site? please <Link to="/register">
             <button className="btn btn-link">Register</button> </Link> </p>
           </div>
-          <p><button onClick={handleGoogleSignIn} className="btn btn-ghost">Google</button></p>
-          <p><button onClick={handleGithubSignIn}>GithubLogin</button></p>
+         <div className="mt-[500px]  ">
+         <p><button onClick={handleGoogleSignIn} className="btn btn-ghost  ">Google</button></p>
+          <p><button onClick={handleGithubSignIn} className="">GithubLogin</button></p>
+         </div>
         </div>
         
       </div>

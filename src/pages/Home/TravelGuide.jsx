@@ -5,12 +5,12 @@ const TravelGuide = () => {
     return (
        
         <div>
-            <div className="flex ml-4 mt-5">
+            <div className=" ml-4 mt-5">
               <MdOutlineTravelExplore />
             <h1 className="text-xl font-bold mb-8 -mt-2">Travel Guide</h1>
               </div>
             
-            <div className="flex justify-around">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
              
         <div className="card card-compact w-[300px] bg-base-100 shadow-xl">
 <figure><img src="https://i.ibb.co/bB43St9/park-lake.jpg" alt="Shoes" /></figure>

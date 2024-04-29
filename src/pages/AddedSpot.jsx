@@ -1,7 +1,7 @@
 import Swal from 'sweetalert2'
-
+// import useAuth from "../hooks/useAuth";
 const AddedSpot = () => {
-
+    //  const {user} = useAuth() || {};
     const handleAddSport = event => {
         event.preventDefault();
 

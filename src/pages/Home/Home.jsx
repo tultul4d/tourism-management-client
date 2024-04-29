@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import SpotCard from "../SpotCard";
 import CardTitels from "../CardTitels";
+import TravelGuide from "./TravelGuide";
 
 
 
@@ -23,6 +24,7 @@ const Home = () => {
                 </SpotCard>)
             }
             </div>
+            <TravelGuide></TravelGuide>
             
             
             </div>

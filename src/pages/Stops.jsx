@@ -1,19 +1,28 @@
 import {  useLoaderData } from "react-router-dom";
 import SpotCard from "./SpotCard";
+
 // import Swal from "sweetalert2";
 
 const Stops = () => {
     
+  
     // const  {_id, name, email, spot_name, country_name, location, short,
     //     cost, seasonality, visitor, photo} = spot;
     const spots = useLoaderData();
     console.log(spots);
 
+   <div>
     {
-        spots.map(spot => <SpotCard key={spot._id}  spot={spot}></SpotCard> 
-
-         )
+        spots.map(spot => <SpotCard  key={spot._id} spot={spot}></SpotCard>)
     }
+   </div>
+
+
+    // {
+    //     spots.map(spot => <SpotCard key={spot._id}  spot={spot}></SpotCard> 
+
+    //      )
+    // }
 
         // const handleDelete = _id =>{
         //     console.log(_id);

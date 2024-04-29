@@ -30,7 +30,8 @@ const router = createBrowserRouter([
      
       {
         path: "/stops",
-        element: <Stops></Stops>
+        element: <Stops></Stops>,
+        loader: () => fetch('http://localhost:5000/spot')
       },
       {
         path: "/add",
@@ -49,9 +50,9 @@ const router = createBrowserRouter([
         element: <Register></Register>
       },
       {
-        path:'cards',
+        path:"/cards/:id",
         element: <CardsDetails></CardsDetails>,
-        
+        loader: ({params}) => fetch(`http://localhost:5000/spot/${params.id}`)
       },
       {
         path: "/updateSpot/:id",

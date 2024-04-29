@@ -57,14 +57,14 @@ const SpotCard = ({spot}) => {
       <p className="mt-2"><span className="font-bold">Visitor: </span>{visitor}</p>
       <p className="py-6"></p>
       <div className="btn-group btn-group-vertical mb-2 space-y-4 ">
-       <Link> <button className="btn btn-active">View</button></Link>
+       <Link > <button className="btn btn-active">View</button></Link>
         <Link to={`/updateSpot/${_id}`}><button className="btn">Edit</button></Link>
         <button
         onClick={() => handleDelete(_id)}
         className="btn">X</button>
 
       </div>
-      <Link >
+      <Link to={`/cards/${_id}`} >
       <button className="btn btn-primary" id="tooltip">View Details </button>
      
       </Link>

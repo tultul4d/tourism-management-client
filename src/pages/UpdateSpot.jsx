@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 
 
 const UpdateSpot = () => {
+    const spot = useLoaderData()
     const handleUpdateSport = event => {
         event.preventDefault();
 
@@ -27,7 +28,7 @@ const UpdateSpot = () => {
         
 
         // send data to the server 
-        fetch(`https://tourism-management-server-lovat.vercel.app/spot/${_id}`, {
+        fetch(`https://tourism-management-server-lovat.vercel.app/spot/${spot._id}`, {
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json'
@@ -37,7 +38,7 @@ const UpdateSpot = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            if(data.insertedId){
+            if(data.modifiedCount > 0){
                 Swal.fire({
                     title: 'Success!',
                     text: 'User UpdateAdded Successfully',
@@ -48,8 +49,8 @@ const UpdateSpot = () => {
         })
 
     }
-    const spot = useLoaderData();
-    console.log(spot);
+    // const spot = useLoaderData();
+    // console.log(spot);
   
     return (
         <div className="bg-[#FAF3F0] p-24">

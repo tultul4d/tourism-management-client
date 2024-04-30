@@ -81,7 +81,7 @@ const Register = () => {
                 <input type="photo" name="photo"  placeholder="photo"  className="input input-bordered" required />
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn btn-primary">Register</button>
               </div>
             </form>
             <p>Already have account? please<Link to="/login">

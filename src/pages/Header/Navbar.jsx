@@ -40,7 +40,7 @@ const Navbar = () => {
                     ? "text-teal-200 border-b-4 border-teal-200"
                     : "hover:text-teal-200"
                 }>My List </NavLink></li>
-                <li><NavLink to="/login" className={({ isActive, isPending }) =>
+                {/* <li><NavLink to="/login" className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
                     : isActive
@@ -54,7 +54,7 @@ const Navbar = () => {
                     : isActive
                     ? "text-teal-200 border-b-4 border-teal-200"
                     : "hover:text-teal-200"
-                }>Register </NavLink></li>
+                }>Register </NavLink></li> */}
     </>
     return (
         <div className="navbar rounded-lg  bg-zinc-200">

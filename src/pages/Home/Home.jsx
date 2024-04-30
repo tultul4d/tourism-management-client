@@ -15,7 +15,7 @@ const Home = () => {
            
             <Banner></Banner>
             <CardTitels></CardTitels>
-            <div className=""><h2>sfgsfgshjf: {sports.length}</h2>
+            <div className="">
             <h2>{sports.photo}</h2>
             <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 ">
             {

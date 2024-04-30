@@ -17,15 +17,16 @@ const AddedSpot = () => {
         const seasonality = form.seasonality.value;
         const visitor = form.visitor.value;
         const photo = form.photo.value;
+        const time = form.time.value;
 
 
         const addSpot = {name, email, spot_name, country_name, location, short,
-        cost, seasonality, visitor, photo}
+        cost, seasonality, visitor, photo,time }
         console.log(addSpot);
         
 
         // send data to the server 
-        fetch('http://localhost:5000/spot', {
+        fetch('https://tourism-management-server-lovat.vercel.app/spot', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

@@ -1,37 +1,29 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import { AuthContext } from "../../providers/AuthProvider";
-// import { useForm } from "react-hook-form";
+
 
 const Register = () => {
 
 
-    const {createUser, updateUserProfile} = useContext(AuthContext)
-    // const {register, handleSubmit, formState: {errors} } = useForm();
+    const {createUser, } = useContext(AuthContext)
     // console.log(authInfo);
-    // const [error, setError] = useState("")
-    const from ='/'
-    const navigate = useNavigate();
 
-    const handleRegister = (data) =>{
-        const {email, password, image, fullName} = data;
-        // e.preventDefault();
-        // const name = e.target.name.value;
-        // const email = e.target. email.value;
-        // const password = e.target.password.value;
-      
+
+
+    const handleRegister = e =>{
+        e.preventDefault();
+        const name = e.target.name.value;
+        const email = e.target. email.value;
+        const password = e.target.password.value;
         
-        // console.log(email, password, name, image, fullName);
+        console.log(email, password, name);
     
         // create user in firebase
         createUser(email, password)
-        .then(() =>{
-            updateUserProfile(fullName, image)
-            // console.log(result.user)
-            .then(() =>{
-                navigate(from);
-              })
+        .then(result =>{
+            console.log(result.user)
         } 
         )
         .catch(error =>{
@@ -48,7 +40,7 @@ const Register = () => {
             toast.warn("Password must be added uppercase and lowercase")
             return
           }
-         
+    
     }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -70,7 +62,7 @@ const Register = () => {
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
-                <input type="email" name="email"  placeholder="email"  className="input input-bordered" required   />
+                <input type="email" name="email"  placeholder="email"  className="input input-bordered" required />
               </div>
 
               <div className="form-control">
@@ -89,11 +81,11 @@ const Register = () => {
                 <input type="photo" name="photo"  placeholder="photo"  className="input input-bordered" required />
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary bg-teal-600">Register</button>
+                <button className="btn btn-primary">Login</button>
               </div>
             </form>
             <p>Already have account? please<Link to="/login">
-            <button className="btn btn-link text-teal-200">Login</button> </Link> </p>
+            <button className="btn btn-link">Login</button> </Link> </p>
           </div>
         </div>
         <ToastContainer />

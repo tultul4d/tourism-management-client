@@ -25,13 +25,13 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/spot')
+        loader: () => fetch('https://tourism-management-server-lovat.vercel.app/spot')
       },
      
       {
         path: "/stops",
         element: <Stops></Stops>,
-        loader: () => fetch('http://localhost:5000/spot')
+        loader: () => fetch('https://tourism-management-server-lovat.vercel.app/spot')
       },
       {
         path: "/add",
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
       {
         path: "/list",
         element: <PrivateRoute><List></List></PrivateRoute>,
-        loader : () => fetch('http://localhost:5000/spot')
+        loader : () => fetch('https://tourism-management-server-lovat.vercel.app/spot')
       },
       {
         path: "/login",
@@ -53,12 +53,12 @@ const router = createBrowserRouter([
       {
         path:"/cards/:id",
         element: <CardsDetails></CardsDetails>,
-        loader: ({params}) => fetch(`http://localhost:5000/spot/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-management-server-lovat.vercel.app/spot/${params.id}`)
       },
       {
         path: "/updateSpot/:id",
         element: <UpdateSpot></UpdateSpot>,
-        loader: ({params}) => fetch(`http://localhost:5000/spot/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-management-server-lovat.vercel.app/spot/${params.id}`)
       }
     ]
   },

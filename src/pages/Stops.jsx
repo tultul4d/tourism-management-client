@@ -1,5 +1,6 @@
 import {  useLoaderData } from "react-router-dom";
 import SpotCard from "./SpotCard";
+// import SpotCard from "./SpotCard";
 
 // import Swal from "sweetalert2";
 
@@ -38,7 +39,7 @@ const Stops = () => {
         //         //     icon: "success"
         //         //   });
         
-        //        fetch(`http://localhost:5000/spot/${_id}`, {
+        //        fetch(`https://tourism-management-server-lovat.vercel.app/spot/${_id}`, {
         //         method: 'DELETE'
                 
         //        })
@@ -57,7 +58,7 @@ const Stops = () => {
         //       });
         //     }
     return (
-        <div>
+        <div className="">
     {
         spots.map(spot => <SpotCard  key={spot._id} spot={spot}></SpotCard>)
     }

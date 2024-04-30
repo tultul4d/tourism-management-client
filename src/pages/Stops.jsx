@@ -11,11 +11,7 @@ const Stops = () => {
     const spots = useLoaderData();
     console.log(spots);
 
-   <div>
-    {
-        spots.map(spot => <SpotCard  key={spot._id} spot={spot}></SpotCard>)
-    }
-   </div>
+   
 
 
     // {
@@ -61,7 +57,12 @@ const Stops = () => {
         //       });
         //     }
     return (
-        <div>he:{spots.name}</div>
+        <div>
+    {
+        spots.map(spot => <SpotCard  key={spot._id} spot={spot}></SpotCard>)
+    }
+   </div>
+        // <div>he:{spots.name}</div>
     //     <div className="  bg-base-200 rounded-lg mb-4">
     //     <div className="hero-content flex-col lg:flex-row">
     //       <img src={spots.photo} className="w-[250px] h-[239px] mr-10 rounded-lg " />

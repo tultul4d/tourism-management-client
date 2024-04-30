@@ -1,6 +1,6 @@
 // import { useContext, useEffect, useState } from "react";
 
-import { useLoaderData } from "react-router-dom";
+// import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 // import { useLoaderData } from "react-router-dom";
 // import { data } from "autoprefixer";
@@ -35,7 +35,7 @@ const List = () => {
                  list?.map(l =>{
                     
 
-                  <div>
+              return    <div>
                         <h1>{l.spot_name}</h1>
                     </div>
                 })

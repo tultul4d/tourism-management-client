@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/cards/:id",
-        element: <CardsDetails></CardsDetails>,
+        element: <PrivateRoute><CardsDetails></CardsDetails></PrivateRoute>,
         loader: ({params}) => fetch(`https://tourism-management-server-lovat.vercel.app/spot/${params.id}`)
       },
       {

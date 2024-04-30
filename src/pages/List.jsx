@@ -85,10 +85,16 @@ const List = () => {
                                                 <input type="checkbox" className="checkbox" />
                                             </label>
                                         </th>
-                                        <th>Name</th>
-                                        <th>Job</th>
-                                        <th>Favorite Color</th>
-                                        <th></th>
+                                        <th>tourists_spot_name</th>
+                                        <th>location
+</th>
+                                        <th>seasonality -</th>
+                                        <th>country_Name
+</th>
+<th>cost</th>
+<th>travel_time</th>
+<th>image </th>
+<th>totalVisitorsPerYear</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -117,11 +123,18 @@ visitor}</span>
                                         <td>{l.
 seasonality
 }</td>
+<td>{l.
+country_name
+}</td>
+<td>{l.cost}</td>
+<td>{l.time}</td>
+<td>{l.photo}</td>
+<td>{l.visitor}</td>
                                         <th>
-                                        <Link to={`/updateSpot/${l._id}`}><button className="btn">Edit</button></Link>
+                                        <Link to={`/updateSpot/${l._id}`}><button className="btn">Update</button></Link>
         <button
         onClick={() => handleDelete(l._id)}
-        className="btn">X</button>
+        className="btn">Delete</button>
                                         </th>
                                     </tr>
 
@@ -130,9 +143,16 @@ seasonality
                                 <tfoot>
                                     <tr>
                                         <th></th>
-                                        <th>Name</th>
-                                        <th>Job</th>
-                                        <th>Favorite Color</th>
+                                        <th>tourists_spot_name</th>
+                                        <th>location
+</th>
+                                        <th>seasonality -</th>
+                                        <th>country_Name
+</th>
+                                        <th>cost</th>
+<th>travel_time</th>
+<th>image </th>
+<th>totalVisitorsPerYear</th>
                                         <th></th>
                                     </tr>
                                 </tfoot>

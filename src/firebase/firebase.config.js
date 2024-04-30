@@ -5,8 +5,10 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+console.log('inside firebase config',import.meta.env.VITE_PASS)
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBHsaCa6sBkg25XjRQPT23MbvvRby5p9UY",
+  apiKey: import.meta.env.VITE_APIKEY,
   authDomain: "tourism-management-websi-c0728.firebaseapp.com",
   projectId: "tourism-management-websi-c0728",
   storageBucket: "tourism-management-websi-c0728.appspot.com",

@@ -6,7 +6,19 @@ const NotFoundPage = () => {
         <div  className={"dark:bg-[#0F172A] h-screen"}>
         
       <div className="grid px-4 pt-20 place-content-center dark:bg-gray-900">
+      <h1 className="mt-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+            Error!!!
+          </h1>
+    
+          <p className="mt-4 text-gray-500 dark:text-gray-400">
+           
+          </p>
+
+          <p className="mt-4 text-gray-500 dark:text-gray-400">
+          You Came To Wrong address 
+          </p>
         <div className="text-center">
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1024 768"
@@ -26,17 +38,7 @@ const NotFoundPage = () => {
             </g>
           </svg>
 
-          <h1 className="mt-6 text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-            Error!!!
-          </h1>
-    
-          <p className="mt-4 text-gray-500 dark:text-gray-400">
-           
-          </p>
-
-          <p className="mt-4 text-gray-500 dark:text-gray-400">
-          You Came To Wrong address 
-          </p>
+          
          <Link to="/home">
          <button className="text- block bg-orange-300 btn ml-32 mt-4">Go Back Home</button>
          </Link>

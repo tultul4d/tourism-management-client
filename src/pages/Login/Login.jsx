@@ -79,11 +79,11 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn btn-primary bg-teal-600">Login</button>
               </div>
             </form>
             <p>New to this Site? please <Link to="/register">
-            <button className="btn btn-link">Register</button> </Link> </p>
+            <button className="btn btn-link text-teal-200 ">Register</button> </Link> </p>
           </div>
          <div className="mt-[500px]  ">
          <p><button onClick={handleGoogleSignIn} className="btn btn-ghost  ">Google</button></p>

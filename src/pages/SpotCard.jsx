@@ -65,7 +65,7 @@ const SpotCard = ({spot}) => {
 
       </div>
       <Link to={`/cards/${_id}`} >
-      <button className="btn btn-primary" id="tooltip">View Details </button>
+      <button className="btn bg-teal-600" id="tooltip">View Details </button>
      
       </Link>
     </div>

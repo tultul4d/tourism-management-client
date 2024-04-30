@@ -16,48 +16,48 @@ const Navbar = () => {
                   isPending
                     ? "pending"
                     : isActive
-                    ? "text-[#FF497C] border-b-4 border-[#FF497C]"
-                    : "hover:text-[#FF497C]"
+                    ? "text-teal-200 border-b-4 border-teal-200"
+                    : "hover:text-teal-200"
                 }>Home </NavLink></li>
     <li><NavLink to="/stops" className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
                     : isActive
-                    ? "text-[#FF497C] border-b-4 border-[#FF497C]"
-                    : "hover:text-[#FF497C]"
+                    ? "text-teal-200 border-b-4 border-teal-200"
+                    : "hover:text-teal-200"
                 }>All Tourists Spot </NavLink></li>
     <li><NavLink to="/add" className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
                     : isActive
-                    ? "text-[#FF497C] border-b-4 border-[#FF497C]"
-                    : "hover:text-[#FF497C]"
+                    ? "text-teal-200 border-b-4 border-teal-200"
+                    : "hover:text-teal-200"
                 }>Add Tourists Spot </NavLink></li>
     <li><NavLink to="/list" className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
                     : isActive
-                    ? "text-[#FF497C] border-b-4 border-[#FF497C]"
-                    : "hover:text-[#FF497C]"
+                    ? "text-teal-200 border-b-4 border-teal-200"
+                    : "hover:text-teal-200"
                 }>My List </NavLink></li>
                 <li><NavLink to="/login" className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
                     : isActive
-                    ? "text-[#FF497C] border-b-4 border-[#FF497C]"
-                    : "hover:text-[#FF497C]"
+                    ? "text-teal-200 border-b-4 border-teal-200"
+                    : "hover:text-teal-200"
                 }>Login </NavLink></li>
 
 <li><NavLink to="/register" className={({ isActive, isPending }) =>
                   isPending
                     ? "pending"
                     : isActive
-                    ? "text-[#FF497C] border-b-4 border-[#FF497C]"
-                    : "hover:text-[#FF497C]"
+                    ? "text-teal-200 border-b-4 border-teal-200"
+                    : "hover:text-teal-200"
                 }>Register </NavLink></li>
     </>
     return (
-        <div className="navbar  bg-orange-100">
+        <div className="navbar rounded-lg  bg-zinc-200">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
